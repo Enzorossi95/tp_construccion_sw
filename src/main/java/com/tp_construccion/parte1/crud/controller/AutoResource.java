@@ -1,4 +1,4 @@
-package com.tp_construccion.parte1.crud.web;
+package com.tp_construccion.parte1.crud.controller;
 
 import com.tp_construccion.parte1.crud.entities.Auto;
 import com.tp_construccion.parte1.crud.service.IAutoService;

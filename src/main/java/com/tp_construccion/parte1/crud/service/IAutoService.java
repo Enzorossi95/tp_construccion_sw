@@ -1,12 +1,16 @@
 package com.tp_construccion.parte1.crud.service;
 
-import com.yoandypv.ejemplos.springcrud.entities.Auto;
+
+import com.tp_construccion.parte1.crud.entities.Auto;
 
 import java.util.Optional;
+import java.util.List;
 
 public interface IAutoService {
      Auto crear(Auto auto);
      Optional<Auto> obtenerPorId(Long id);
      Auto actualizar(Long id, double nuevoPrecio);
      boolean eliminar(Long id);
+     List<Auto> obtenerTodos(); // Método para obtener todos los autos
+     List<Auto> obtenerPorMarca(String marca);
 }

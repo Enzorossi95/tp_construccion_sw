@@ -1,12 +1,13 @@
 package com.tp_construccion.parte1.crud.web;
 
-import com.yoandypv.ejemplos.springcrud.entities.Auto;
-import com.yoandypv.ejemplos.springcrud.service.IAutoService;
+import com.tp_construccion.parte1.crud.entities.Auto;
+import com.tp_construccion.parte1.crud.service.IAutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -42,6 +43,19 @@ public class AutoResource {
     public ResponseEntity<Void> eliminarAuto(@PathVariable("id") Long id) {
         this.autoService.eliminar(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/autos")
+    public ResponseEntity<List<Auto>> listarAutos(@RequestParam(required = false) String marca) {
+        List<Auto> autos;
+
+        if (marca != null && !marca.isEmpty()) {
+            autos = this.autoService.obtenerPorMarca(marca);
+        } else {
+            autos = this.autoService.obtenerTodos();
+        }
+
+        return new ResponseEntity<>(autos, HttpStatus.OK);
     }
 
 

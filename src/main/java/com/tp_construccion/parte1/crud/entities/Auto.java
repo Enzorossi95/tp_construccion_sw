@@ -13,6 +13,6 @@ public class Auto {
     private Long id;
     private String marca;
     private int anno;
-    private int capacidad;
+    private String modelo;
     private double precio;
 }

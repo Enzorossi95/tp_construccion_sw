@@ -1,10 +1,12 @@
 package com.tp_construccion.parte1.crud.service;
 
-import com.yoandypv.ejemplos.springcrud.entities.Auto;
-import com.yoandypv.ejemplos.springcrud.repository.AutoRepository;
+import com.tp_construccion.parte1.crud.entities.Auto;
+import com.tp_construccion.parte1.crud.repository.AutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -38,5 +40,17 @@ public class IAutoServiceImpl implements IAutoService {
     public boolean eliminar(Long id) {
         this.autoRepository.deleteById(id);
         return true;
+    }
+
+    @Override
+    public List<Auto> obtenerTodos() {
+        List<Auto> autos = new ArrayList<>();
+        this.autoRepository.findAll().forEach(autos::add);
+        return autos;
+    }
+
+    @Override
+    public List<Auto> obtenerPorMarca(String marca) {
+        return this.autoRepository.findByMarca(marca);
     }
 }

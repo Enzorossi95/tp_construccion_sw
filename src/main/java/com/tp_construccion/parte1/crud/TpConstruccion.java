@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TpConstruccion {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCrudApplication.class, args);
+        SpringApplication.run(TpConstruccion.class, args);
     }
 
 }

@@ -1,6 +1,6 @@
-package com.tp_construccion.parte1.crud.repository;
+package com.tp_construccion.crud.repository;
 
-import com.tp_construccion.parte1.crud.entities.Auto;
+import com.tp_construccion.crud.entities.Auto;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

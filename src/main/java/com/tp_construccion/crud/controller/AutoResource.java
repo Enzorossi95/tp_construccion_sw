@@ -1,7 +1,7 @@
-package com.tp_construccion.parte1.crud.web;
+package com.tp_construccion.crud.controller;
 
-import com.tp_construccion.parte1.crud.entities.Auto;
-import com.tp_construccion.parte1.crud.service.IAutoService;
+import com.tp_construccion.crud.entities.Auto;
+import com.tp_construccion.crud.service.IAutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -57,6 +57,5 @@ public class AutoResource {
 
         return new ResponseEntity<>(autos, HttpStatus.OK);
     }
-
 
 }

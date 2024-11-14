@@ -1,4 +1,4 @@
-package com.tp_construccion.parte1.crud.entities;
+package com.tp_construccion.crud.entities;
 
 import lombok.Data;
 

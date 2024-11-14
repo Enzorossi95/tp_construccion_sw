@@ -1,7 +1,7 @@
-package com.tp_construccion.parte1.crud.service;
+package com.tp_construccion.crud.service;
 
 
-import com.tp_construccion.parte1.crud.entities.Auto;
+import com.tp_construccion.crud.entities.Auto;
 
 import java.util.Optional;
 import java.util.List;

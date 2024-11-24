@@ -1,0 +1,6 @@
+com\tp_construccion\crud\controller\AutoResource.class
+com\tp_construccion\crud\entities\Auto.class
+com\tp_construccion\crud\TpConstruccion.class
+com\tp_construccion\crud\service\IAutoServiceImpl.class
+com\tp_construccion\crud\service\IAutoService.class
+com\tp_construccion\crud\repository\AutoRepository.class

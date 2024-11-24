@@ -1,6 +1,5 @@
 package com.tp_construccion.crud.service;
 
-
 import com.tp_construccion.crud.entities.Auto;
 
 import java.util.Optional;
@@ -11,6 +10,6 @@ public interface IAutoService {
      Optional<Auto> obtenerPorId(Long id);
      Auto actualizar(Long id, double nuevoPrecio);
      boolean eliminar(Long id);
-     List<Auto> obtenerTodos(); // Método para obtener todos los autos
+     List<Auto> obtenerTodos();
      List<Auto> obtenerPorMarca(String marca);
 }

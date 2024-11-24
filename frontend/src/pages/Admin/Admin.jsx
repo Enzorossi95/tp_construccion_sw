@@ -9,7 +9,6 @@ const Admin = () => {
     const [nuevoAuto, setNuevoAuto] = useState({ marca: "", anno: "", modelo: "", precio: "" });
     const [autoActualizar, setAutoActualizar] = useState({ id: "", nuevoPrecio: "" });
 
-    // Cargar datos al iniciar
     useEffect(() => {
         cargarAutos();
     }, []);
@@ -23,7 +22,6 @@ const Admin = () => {
         }
     };
 
-    // Crear un auto nuevo
     const crearAuto = async () => {
         try {
             await axios.post("http://localhost:8080/api/v1/autos", nuevoAuto);
@@ -34,7 +32,6 @@ const Admin = () => {
         }
     };
 
-    // Actualizar precio de un auto
     const actualizarPrecio = async () => {
         try {
             await axios.put(`http://localhost:8080/api/v1/autos/${autoActualizar.id}/nuevoprecio/${autoActualizar.nuevoPrecio}`);
@@ -45,7 +42,6 @@ const Admin = () => {
         }
     };
 
-    // Eliminar un auto
     const eliminarAuto = async (id) => {
         try {
             await axios.delete(`http://localhost:8080/api/v1/autos/${id}`);
